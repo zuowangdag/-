@@ -1,0 +1,6 @@
+/*top_wrapper*/
+the_ROM_image:
+{
+  [bootloader]<top_wrapper/boot/fsbl.elf>
+   <bitstream> 
+}

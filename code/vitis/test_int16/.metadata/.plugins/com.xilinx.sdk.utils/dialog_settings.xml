@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="scw_hwspec" value="/home/y/xilinx/Vitis/2020.2/data/embeddedsw/lib/fixed_hwplatforms"/>
+	<item key="bootgen_files_selection" value="/home/y/works/sdk/test_int16/jj0/Debug/output.bif"/>
+</section>

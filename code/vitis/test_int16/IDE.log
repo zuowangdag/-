@@ -1,0 +1,76 @@
+18:47:59 INFO  : Launching XSCT server: xsct -n  -interactive /home/y/works/sdk/test_int16/temp_xsdb_launch_script.tcl
+18:47:59 INFO  : Registering command handlers for Vitis TCF services
+18:48:02 INFO  : Platform repository initialization has completed.
+18:48:02 INFO  : XSCT server has started successfully.
+18:48:02 INFO  : plnx-install-location is set to ''
+18:48:02 INFO  : Successfully done setting XSCT server connection channel  
+18:48:02 INFO  : Successfully done query RDI_DATADIR 
+18:48:02 INFO  : Successfully done setting workspace for the tool. 
+18:49:18 WARN  : An unexpected exception occurred in the module 'platform project logging'
+18:49:18 WARN  : An unexpected exception occurred in the module 'platform project logging'
+18:49:18 WARN  : An unexpected exception occurred in the module 'platform project logging'
+18:49:18 WARN  : An unexpected exception occurred in the module 'platform project logging'
+18:49:18 INFO  : Platform 'top' is added to custom repositories.
+18:49:20 INFO  : Platform 'top' is added to custom repositories.
+18:49:31 INFO  : Result from executing command 'getProjects': top
+18:49:31 INFO  : Result from executing command 'getPlatforms': top|/home/y/works/sdk/test_int16/top/export/top/top.xpfm
+14:50:19 INFO  : Platform 'top_wrapper' is added to custom repositories.
+14:50:20 INFO  : Platform 'top_wrapper' is added to custom repositories.
+14:50:44 INFO  : Result from executing command 'getProjects': top;top_wrapper
+14:50:44 INFO  : Result from executing command 'getPlatforms': top_wrapper|/home/y/works/sdk/test_int16/top_wrapper/export/top_wrapper/top_wrapper.xpfm;top|/home/y/works/sdk/test_int16/top/export/top/top.xpfm
+15:54:57 INFO  : Launching XSCT server: xsct -n  -interactive /home/y/works/sdk/test_int16/temp_xsdb_launch_script.tcl
+15:54:58 INFO  : Platform repository initialization has completed.
+15:54:58 INFO  : Registering command handlers for Vitis TCF services
+15:55:00 INFO  : XSCT server has started successfully.
+15:55:00 INFO  : Successfully done setting XSCT server connection channel  
+15:55:00 INFO  : plnx-install-location is set to ''
+15:55:00 INFO  : Successfully done setting workspace for the tool. 
+15:55:00 INFO  : Successfully done query RDI_DATADIR 
+15:56:09 INFO  : Result from executing command 'getProjects': top;top_wrapper;zc702
+15:56:09 INFO  : Result from executing command 'getPlatforms': top_wrapper|/home/y/works/sdk/test_int16/top_wrapper/export/top_wrapper/top_wrapper.xpfm;top|/home/y/works/sdk/test_int16/top/export/top/top.xpfm
+15:56:09 WARN  : An unexpected exception occurred in the module 'platform project logging'
+15:56:09 INFO  : Platform 'zc702' is added to custom repositories.
+15:56:16 INFO  : Platform 'zc702' is added to custom repositories.
+15:57:58 INFO  : Result from executing command 'getProjects': top;top_wrapper;zc702
+15:57:58 INFO  : Result from executing command 'getPlatforms': top_wrapper|/home/y/works/sdk/test_int16/top_wrapper/export/top_wrapper/top_wrapper.xpfm;top|/home/y/works/sdk/test_int16/top/export/top/top.xpfm;zc702|/home/y/works/sdk/test_int16/zc702/export/zc702/zc702.xpfm
+15:58:01 INFO  : Checking for BSP changes to sync application flags for project 'jj0'...
+16:02:20 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/y/works/sdk/test_int16/jj0/Debug/BOOT.bin
+16:02:20 INFO  : Creating new bif file /home/y/works/sdk/test_int16/jj0/Debug/output.bif
+16:02:21 INFO  : Bootgen command execution is done.
+16:03:10 INFO  : Launching the emulator on project 'test0' for configuration 'Debug'
+16:03:13 ERROR : Failed to start emulator for 'test0'.
+Reason: Failed to resolve image file path '' for the application.
+16:03:46 INFO  : Launching the emulator on project 'jj0' for configuration 'Debug'
+16:03:46 INFO  : Launching QEMU with command 'launch_emulator -device-family 7series -pid-file emulation.pid -t sw_emu -gdb-port 1137'
+16:03:47 ERROR : [QEMU Process]: qemu-system-aarch64: info: QEMU waiting for connection on: disconnected:tcp:127.0.0.1:9533,server
+
+16:03:52 INFO  : Emulator has started.
+16:05:09 INFO  : XRT server required for baremetal application debugging on QEMU has started successfully on port '4354'.
+16:05:09 INFO  : 'connect -url tcp:localhost:4354' command is executed.
+16:05:09 INFO  : 'gdbremote connect localhost:1137' command is executed.
+16:05:09 INFO  : Connected to target on host 'localhost' and port '4354'.
+16:05:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:05:09 INFO  : The application '/home/y/works/sdk/test_int16/jj0/Debug/jj0.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:05:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:localhost:4354
+targets 3
+dow /home/y/works/sdk/test_int16/jj0/Debug/jj0.elf
+----------------End of Script----------------
+
+16:05:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:05:10 INFO  : 'con' command is executed.
+16:05:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets 3
+con
+----------------End of Script----------------
+
+16:05:10 INFO  : Launch script is exported to file '/home/y/works/sdk/test_int16/jj0_system/_ide/scripts/debugger_jj0-emulation.tcl'
+16:06:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:17:22 INFO  : Generated template bif file for jj0_system
+13:38:17 INFO  : Disconnected from the channel tcfchan#2.
+13:38:17 INFO  : Terminating XRT server used for debugging baremetal applications on QEMU.
+13:38:17 INFO  : Stopping the emulator on project 'jj0' for configuration 'Debug'
+13:38:17 INFO  : Stopping QEMU with command 'launch_emulator -kill-pid-file /home/y/works/sdk/test_int16/jj0/Debug/emulation.pid'
+13:38:17 ERROR : [QEMU Process]: qemu-system-aarch64: terminating on signal 15 from pid 42123 (<unknown process>)
+
+13:38:22 INFO  : Emulator has terminated.

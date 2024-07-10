@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Mar  6 16:44:34 2023
+# Process ID: 22895
+# Current directory: /home/y/works/vivado/project_1_int16_pp/project_1_int16_pp.runs/top_auto_pc_1_synth_1
+# Command line: vivado -log top_auto_pc_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_auto_pc_1.tcl
+# Log file: /home/y/works/vivado/project_1_int16_pp/project_1_int16_pp.runs/top_auto_pc_1_synth_1/top_auto_pc_1.vds
+# Journal file: /home/y/works/vivado/project_1_int16_pp/project_1_int16_pp.runs/top_auto_pc_1_synth_1/vivado.jou
+#-----------------------------------------------------------
+source top_auto_pc_1.tcl -notrace

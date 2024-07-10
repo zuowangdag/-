@@ -1,0 +1,89 @@
+09:17:32 **** Incremental Build of configuration Debug for project test0 ****
+make all 
+Building file: ../src/main.cpp
+Invoking: ARM v7 Linux g++ compiler
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function 'int main(int, char**)':
+../src/main.cpp:11:9: warning: unused variable 'row' [-Wunused-variable]
+   11 |     int row = 640,col = 640;
+      |         ^~~
+../src/main.cpp:11:19: warning: unused variable 'col' [-Wunused-variable]
+   11 |     int row = 640,col = 640;
+      |                   ^~~
+../src/main.cpp:20:21: warning: unused variable 'c' [-Wunused-variable]
+   20 |     int w=640,h=640,c=3;
+      |                     ^
+In file included from ../src/main.cpp:4:
+../src/utils.h: At global scope:
+../src/utils.h:30:14: warning: 'float get_pixel_extend(image, int, int, int)' declared 'static' but never defined [-Wunused-function]
+   30 | static float get_pixel_extend(image m, int x, int y, int c);
+      |              ^~~~~~~~~~~~~~~~
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/ps_sim_copy.cpp
+Invoking: ARM v7 Linux g++ compiler
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ps_sim_copy.o" -MMD -MP -MF"src/ps_sim_copy.d" -MT"src/ps_sim_copy.o" -o "src/ps_sim_copy.o" "../src/ps_sim_copy.cpp"
+../src/ps_sim_copy.cpp: In function 'int copy_file2mem(char*, uint32_t, long unsigned int)':
+../src/ps_sim_copy.cpp:104:15: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  104 |  while(rd_num = fread(buffer, sizeof(unsigned char), 1024*1024, fp))
+      |        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ps_sim_copy.cpp:110:32: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long unsigned int' [-Wformat=]
+  110 |  printf("copy_file2mem offset=%d\n",offset);
+      |                               ~^    ~~~~~~
+      |                                |    |
+      |                                int  long unsigned int
+      |                               %ld
+../src/ps_sim_copy.cpp: In function 'int copy_mem2file(char*, uint32_t, long unsigned int)':
+../src/ps_sim_copy.cpp:133:15: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  133 |  while(addbyte=((x<1024*1024)?x:(1024*1024)))
+      |        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ps_sim_copy.cpp:140:32: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long unsigned int' [-Wformat=]
+  140 |  printf("copy_mem2file offset=%d\n",offset);
+      |                               ~^    ~~~~~~
+      |                                |    |
+      |                                int  long unsigned int
+      |                               %ld
+../src/ps_sim_copy.cpp: In function 'void net_ps(network*, float*, float*)':
+../src/ps_sim_copy.cpp:351:17: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  351 |   copy_file2mem("weights_quan.bin", 14516224, WEIGHTS_BASE);
+      |                 ^~~~~~~~~~~~~~~~~~
+../src/ps_sim_copy.cpp:352:17: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  352 |   copy_file2mem("bias_quan.bin", 24576, BIAS_BASE);
+      |                 ^~~~~~~~~~~~~~~
+../src/ps_sim_copy.cpp:378:7: warning: unused variable 'inputs_nums' [-Wunused-variable]
+  378 |   int inputs_nums = 320 * 320 * 32 * 2;
+      |       ^~~~~~~~~~~
+../src/ps_sim_copy.cpp:413:6: warning: variable 'layertype' set but not used [-Wunused-but-set-variable]
+  413 |   u8 layertype = 0;
+      |      ^~~~~~~~~
+../src/ps_sim_copy.cpp:414:8: warning: variable 'act_type' set but not used [-Wunused-but-set-variable]
+  414 |   bool act_type;
+      |        ^~~~~~~~
+../src/ps_sim_copy.cpp: In instantiation of 'void generate_concat_address(network*, T*, T*, const u8&) [with T = unsigned int; network = network; u8 = unsigned char]':
+../src/ps_sim_copy.cpp:684:30:   required from 'void generate_address(network*, T*, T*, T) [with T = unsigned int; network = network]'
+../src/ps_sim_copy.cpp:393:68:   required from here
+../src/ps_sim_copy.cpp:808:13: warning: unused variable 'layer_size' [-Wunused-variable]
+  808 |   const int layer_size = l.c * l.h * l.w;
+      |             ^~~~~~~~~~
+In file included from ../src/ps.h:10,
+                 from ../src/ps_sim_copy.cpp:4:
+../src/utils.h: At global scope:
+../src/utils.h:30:14: warning: 'float get_pixel_extend(image, int, int, int)' declared 'static' but never defined [-Wunused-function]
+   30 | static float get_pixel_extend(image m, int x, int y, int c);
+      |              ^~~~~~~~~~~~~~~~
+Finished building: ../src/ps_sim_copy.cpp
+ 
+Building target: test0.elf
+Invoking: ARM v7 Linux g++ linker
+arm-linux-gnueabihf-g++  -o "test0.elf"  ./src/main.o ./src/ps_sim_copy.o ./src/utils.o ./src/xtop.o ./src/xtop_linux.o   
+Finished building target: test0.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size test0.elf  |tee "test0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 210883	   2104	    256	 213243	  340fb	test0.elf
+Finished building: test0.elf.size
+ 
+
+09:17:33 Build Finished (took 1s.400ms)
+
